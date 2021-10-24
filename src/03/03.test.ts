@@ -36,7 +36,7 @@ beforeEach(() => {
     }
 })
 
-test("new skill should be added to student", () => {
+test.skip("new skill should be added to student", () => {
     expect(student.technologies.length).toBe(4)
 
     addSkill(student, "JS")
@@ -47,27 +47,27 @@ test("new skill should be added to student", () => {
 })
 
 
-test("new student should be made active", () => {
+test.skip("new student should be made active", () => {
     expect(student.isActive).toBe(false)
     makeStudentActive(student)
 
     expect(student.isActive).toBe(true)
 })
 
-test("is student live in this city", () => {
+test.skip("is student live in this city", () => {
     expect(student.address.city.title).toBe("Barcelona")
     changeStudentCity(student)
     expect(student.address.city.title).toBe("New York")
 })
 
-test("is student live in this country", () => {
+test.skip("is student live in this country", () => {
 
     expect(student.address.city.countryTitle).toBe("Spain")
     changeStudentCountry(student)
     expect(student.address.city.countryTitle).toBe("USA")
 })
 
-test("does student live in this country", () => {
+test.skip("does student live in this country", () => {
 
     let res1 = doesStudentLiveIn(student, "Spain")
     let res2 = doesStudentLiveIn(student, "USA")

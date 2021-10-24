@@ -9,5 +9,6 @@ export const getStreetTitlesOfHouses = (houses: housesType[]) => {
 }
 
 export const createGratingMassages = (houses: housesType[]) => {
-    return houses.map(h => `Hello guys from ${h.address.street.title}`)
+    let callbackH = (h: housesType) => `Hello guys from ${h.address.street.title}`
+    return houses.map(callbackH)
 }
